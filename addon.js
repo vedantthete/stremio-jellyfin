@@ -74,7 +74,7 @@ builder.defineStreamHandler(async ({type, id}) => {
 
     if (!(itemId === undefined)) {
         const stream = {
-            url: `${server}/Items/${itemId}/Download?api_key=${jellyfin.auth.AccessToken}&is_stremio=true`,
+            url: `${server}/Items/${itemId}/Download?api_key=${jellyfin.auth.AccessToken}&is_stremio=true&id=${id}`,
             name: '⚡ High Speed Jellyfin',
             description: item.MediaSources[0].MediaStreams[0].DisplayTitle
         }
